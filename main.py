@@ -5,6 +5,7 @@ def setup_logging():
     logging.basicConfig(level=logging.INFO)
 
 def hello():
+    """Print hello message"""
     logging.info("Hello function called")
     print("Hello from lab!")
 
