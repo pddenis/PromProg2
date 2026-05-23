@@ -1,5 +1,34 @@
-<<<<<<< HEAD
-def hello(): print("Hello from Developer A!")
-=======
-print('Hello World')
->>>>>>> cd67bd6afeb514c648f568b1e66713bf5adee825
+import logging
+
+LOG_LEVEL = logging.INFO
+
+def setup_logging():
+    """Настройка логирования с обработкой ошибок"""
+    try:
+        logging.basicConfig(level=LOG_LEVEL)
+    except Exception as e:
+        print(f"Ошибка настройки логирования: {e}")
+
+def hello():
+    """Print hello message"""
+    logging.info("Hello function called")
+    print("Hello from Developer A!")
+    print("Hello from Developer B!")
+
+def greet(name):
+    """Print greeting message"""
+    logging.info(f"Greet function called with {name}")
+    print(f"Hello, {name}!")
+
+def farewell(name):
+    """Print farewell message"""
+    logging.info(f"Farewell function called with {name}")
+    print(f"Goodbye, {name}!")
+
+def main():
+    setup_logging()
+    greet("World")
+    farewell("World")
+
+if __name__ == "__main__":
+    main()
