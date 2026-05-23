@@ -15,6 +15,12 @@ def greet(name):
 def main():
     setup_logging()
     greet("World")
+    farewell("World")
 
 if __name__ == "__main__":
     main()
+
+def farewell(name):
+    """Прощальная функция"""
+    logging.info(f"Farewell function called with {name}")
+    print(f"Goodbye, {name}!")
